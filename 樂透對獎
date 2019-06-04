@@ -1,0 +1,53 @@
+import java.util.*;
+public class test0604 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner (System.in);
+		System.out.println("請輸入開獎號碼");
+		int a[]= new int[7];
+        for(int i=0;i<7;i++) {
+        	a[i]=sc.nextInt();
+        } 
+        for(int i=0;i<7;i++) {
+        	System.out.print(a[i]+" ");
+        } 
+        do {
+        System.out.println();
+        System.out.print("輸入對獎號碼");
+        System.out.println();
+        int count=0;
+        int f[]= new int[7];
+        for(int i=0;i<7;i++) {
+        	f[i]=sc.nextInt();
+        	if(a[i]==f[i]) {
+        		count+=1;
+        	}
+        } 
+        for(int i=0;i<7;i++) {
+        	 System.out.print(f[i]+" ");
+        } 
+        if(count==7)
+        	System.out.print("中20000元");
+        else
+        	if(count==6)
+        		System.out.print("中10000元");
+        	else
+            	if(count==5)
+            		System.out.print("中5000元");
+            	else
+                	if(count==4)
+                		System.out.print("中1000元");
+                	else
+                    	if(count==3)
+                    		System.out.print("中500元");
+                    	else
+                        	if(count==2)
+                        		System.out.print("中100元");
+                        	else
+                            	if(count==1)
+                            		System.out.print("中50元");
+                            	else                       
+                                		System.out.print("再接再厲");
+        }while(true);               
+	}
+}
